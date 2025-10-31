@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5806944188324853"
+     crossorigin="anonymous"></script>
+     
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video to MP3 Converter – Free, Fast, No Upload</title>
+    <meta name="description" content="Convert MP4, MOV, WEBM to MP3 or WAV instantly in your browser. No upload, no signup, 100% private.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Online Video to MP3 Converter">
+    <meta property="og:description" content="Extract audio from video in seconds – works on phone & desktop.">
+    <meta property="og:image" content="https://yoursite.com/thumbnail.jpg">
+    <meta property="og:url" content="https://yoursite.com">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="icon-192.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>Video to Audio Converter</h1>
+                <p>Convert MP4, MOV, WEBM to MP3 or WAV – instantly in your browser!</p>
+            </div>
+
+            <!-- Upload Area -->
+            <div class="upload-area" id="upload-area">
+                <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <p>Drop a file here or <span class="link">click to upload</span></p>
+            </div>
+
+            <!-- Hidden Input -->
+            <input type="file" id="file-input" accept="video/mp4,video/webm,video/quicktime,video/x-msvideo" style="display:none;">
+
+            <!-- File Info -->
+            <div id="file-info" class="file-info" style="display:none;">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#27ae60" stroke-width="2">
+                    <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+                <span id="file-name"></span>
+                <span id="file-size"></span>
+            </div>
+
+            <!-- Options -->
+            <div class="options">
+                <div class="option">
+                    <label>Format:</label>
+                    <select id="format">
+                        <option value="mp3">MP3</option>
+                        <option value="wav">WAV</option>
+                    </select>
+                </div>
+                <div class="option">
+                    <label>Quality:</label>
+                    <select id="quality">
+                        <option value="128">128 kbps</option>
+                        <option value="192" selected>192 kbps</option>
+                        <option value="320">320 kbps</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Convert Button -->
+            <button id="convert-button" class="btn-primary" disabled>
+                <span class="btn-text">Convert to Audio</span>
+                <span class="btn-loader" style="display:none;"></span>
+            </button>
+
+            <!-- Progress -->
+            <div id="progress-container" class="progress-container" style="display:none;">
+                <div class="progress-info">
+                    <span id="progress-text">Reading file... 0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+            </div>
+
+            <!-- Result -->
+            <div id="result" class="result" style="display:none;">
+                <p id="status"></p>
+                <div class="result-actions">
+                    <a id="download-link" href="#" download="" class="btn-download">
+                        Download File
+                    </a>
+                    <button id="new-file" class="btn-secondary">New File</button>
+                </div>
+            </div>
+
+            <p class="footer-note">All processing happens in your browser – no servers, no data sent.</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lamejs/1.2.1/lame.min.js"></script>
+    <script defer src="script.js"></script>
+
+    <!-- Analytics (Uncomment when ready) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXX');
+    </script> -->
+</body>
+</html>
